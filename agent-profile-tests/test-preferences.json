@@ -1,0 +1,21 @@
+{"tests": [
+    {
+        "title": "test good preferences",
+        "expect": true,
+        "test": {
+            "preferences": {
+                "audio_level": 50,
+                "language": "en",
+                "delivery_speed": 10,
+                "audio_captioning": -1
+            }
+        }
+    },
+    {
+        "title": "test good empty preferences",
+        "expect": true,
+        "test": {
+            "preferences": { }
+        }
+    }
+]}
