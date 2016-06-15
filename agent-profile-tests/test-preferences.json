@@ -17,5 +17,239 @@
         "test": {
             "preferences": { }
         }
+    },
+    {
+        "title": "test good audio_level only preferences",
+        "expect": true,
+        "test": {
+            "preferences": {
+                "audio_level":  45
+            }
+        }
+    },
+    {
+        "title": "test bad string type audio_level only preferences",
+        "expect": false,
+        "test": {
+            "preferences": {
+                "audio_level":  "foo"
+            }
+        }
+    },
+    {
+        "title": "test bad boolean type audio_level only preferences",
+        "expect": false,
+        "test": {
+            "preferences": {
+                "audio_level":  false
+            }
+        }
+    },
+    {
+        "title": "test bad array type audio_level only preferences",
+        "expect": false,
+        "test": {
+            "preferences": {
+                "audio_level":  []
+            }
+        }
+    },
+    {
+        "title": "test bad object type audio_level only preferences",
+        "expect": false,
+        "test": {
+            "preferences": {
+                "audio_level":  {}
+            }
+        }
+    },
+    {
+        "title": "test good language only preferences",
+        "expect": true,
+        "test": {
+            "preferences": {
+                "language": "fr"
+            }
+        }
+    },
+    {
+        "title": "test good language sub code only preferences",
+        "expect": true,
+        "test": {
+            "preferences": {
+                "language": "en-GB"
+            }
+        }
+    },
+    {
+        "title": "test bad number type language only preferences",
+        "expect": false,
+        "test": {
+            "preferences": {
+                "language": 66
+            }
+        }
+    },
+    {
+        "title": "test bad boolean type language only preferences",
+        "expect": false,
+        "test": {
+            "preferences": {
+                "language": true
+            }
+        }
+    },
+    {
+        "title": "test bad array type language only preferences",
+        "expect": false,
+        "test": {
+            "preferences": {
+                "language": []
+            }
+        }
+    },
+    {
+        "title": "test bad object type language only preferences",
+        "expect": false,
+        "test": {
+            "preferences": {
+                "language": {}
+            }
+        }
+    },
+    {
+        "title": "test good delivery_speed only preferences",
+        "expect": true,
+        "test": {
+            "preferences": {
+                "delivery_speed": 10
+            }
+        }
+    },
+    {
+        "title": "test bad low number value for delivery_speed only preferences",
+        "expect": false,
+        "test": {
+            "preferences": {
+                "delivery_speed": -1
+            }
+        }
+    },
+    {
+        "title": "test bad string type for delivery_speed only preferences",
+        "expect": false,
+        "test": {
+            "preferences": {
+                "delivery_speed": "10"
+            }
+        }
+    },
+    {
+        "title": "test bad boolean type for delivery_speed only preferences",
+        "expect": false,
+        "test": {
+            "preferences": {
+                "delivery_speed": true
+            }
+        }
+    },
+    {
+        "title": "test bad array type for delivery_speed only preferences",
+        "expect": false,
+        "test": {
+            "preferences": {
+                "delivery_speed": []
+            }
+        }
+    },
+    {
+        "title": "test bad object type for delivery_speed only preferences",
+        "expect": false,
+        "test": {
+            "preferences": {
+                "delivery_speed": {}
+            }
+        }
+    },
+    {
+        "title": "test good audio_captioning only preferences",
+        "expect": true,
+        "test": {
+            "preferences": {
+                "audio_captioning": -1
+            }
+        }
+    },
+    {
+        "title": "test good audio_captioning only preferences",
+        "expect": true,
+        "test": {
+            "preferences": {
+                "audio_captioning": 0
+            }
+        }
+    },
+    {
+        "title": "test good audio_captioning only preferences",
+        "expect": true,
+        "test": {
+            "preferences": {
+                "audio_captioning": 1
+            }
+        }
+    },
+    {
+        "title": "test bad high val audio_captioning only preferences",
+        "expect": false,
+        "test": {
+            "preferences": {
+                "audio_captioning": 2
+            }
+        }
+    },
+    {
+        "title": "test bad low val audio_captioning only preferences",
+        "expect": false,
+        "test": {
+            "preferences": {
+                "audio_captioning": -1.01
+            }
+        }
+    },
+    {
+        "title": "test bad string type audio_captioning preferences",
+        "expect": false,
+        "test": {
+            "preferences": {
+                "audio_captioning": "-1"
+            }
+        }
+    },
+    {
+        "title": "test bad boolean type audio_captioning preferences",
+        "expect": false,
+        "test": {
+            "preferences": {
+                "audio_captioning": false
+            }
+        }
+    },
+    {
+        "title": "test bad array type audio_captioning preferences",
+        "expect": false,
+        "test": {
+            "preferences": {
+                "audio_captioning": []
+            }
+        }
+    },
+    {
+        "title": "test bad object type audio_captioning preferences",
+        "expect": false,
+        "test": {
+            "preferences": {
+                "audio_captioning": {}
+            }
+        }
     }
 ]}
