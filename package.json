@@ -1,0 +1,16 @@
+{
+  "name": "schema-validation",
+  "version": "1.0.0",
+  "description": "little script to test json schemas",
+  "main": "scorm-validator.js",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "is-my-json-valid": "^2.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tom",
+  "license": "ISC"
+}
