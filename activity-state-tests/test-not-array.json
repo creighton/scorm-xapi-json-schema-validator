@@ -1,0 +1,30 @@
+{"tests": [
+    {
+        "title": "test attempts as a uri, not array",
+        "expect": false,
+        "test": {
+            "attempts": "http://google.com"
+        }
+    },
+    {
+        "title": "test attempts as a boolean, not array",
+        "expect": false,
+        "test": {
+            "attempts": true
+        }
+    },
+    {
+        "title": "test attempts as a number, not array",
+        "expect": false,
+        "test": {
+            "attempts": 13
+        }
+    },
+    {
+        "title": "test attempts as an object, not array",
+        "expect": false,
+        "test": {
+            "attempts": {"foo":"http://google.com"}
+        }
+    }
+]}

@@ -1,0 +1,46 @@
+{"tests": [
+    {
+        "title": "test good comments_from_lms",
+        "expect": true,
+        "test": {
+            "comments_from_lms": {
+                "comment": "hello world",
+                "location": "the world",
+                "timestamp": "2016-06-14T19:24:20+00:00"
+            }
+        }
+    },
+    {
+        "title": "test bad comment in comments_from_lms",
+        "expect": false,
+        "test": {
+            "comments_from_lms": {
+                "comment": true,
+                "location": "the world",
+                "timestamp": "2016-06-14T19:24:20+00:00"
+            }
+        }
+    },
+    {
+        "title": "test bad location in comments_from_lms",
+        "expect": false,
+        "test": {
+            "comments_from_lms": {
+                "comment": "hello world",
+                "location": 7,
+                "timestamp": "2016-06-14T19:24:20+00:00"
+            }
+        }
+    },
+    {
+        "title": "test bad timestamp in comments_from_lms",
+        "expect": false,
+        "test": {
+            "comments_from_lms": {
+                "comment": "hello world",
+                "location": "the world",
+                "timestamp": "today"
+            }
+        }
+    }
+]}

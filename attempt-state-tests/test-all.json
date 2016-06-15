@@ -1,0 +1,26 @@
+{"tests": [
+    {
+        "title": "test a complete attempt state object",
+        "expect": true,
+        "test": {
+            "credit": "credit",
+            "mode": "browse",
+            "location": "here and now",
+            "preferences": {
+                "audio_level": 50,
+                "language": "en",
+                "delivery_speed": 10,
+                "audio_captioning": -1
+            },
+            "total_time": "PT0H0M4S",
+            "adl_data": [
+                {
+                    "activityId": "http://test.iri.example.com",
+                    "agent": {"mbox": "mailto:tom@example.com"},
+                    "stateId": "test-one",
+                    "registration": "b4a57cf5-0d48-4439-a650-1753af8831a3"
+                }
+            ]
+        }
+    }
+]}

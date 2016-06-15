@@ -1,0 +1,18 @@
+{"tests": [
+    {
+        "title": "test a complete activity profile object",
+        "expect": true,
+        "test": {
+            "comments_from_lms": {
+                "comment": "hello world",
+                "location": "the world",
+                "timestamp": "2016-06-14T19:24:20+00:00"
+            },
+            "completion_threshold": 0.75,
+            "launch_data": "This is the launch data string... it can be long",
+            "max_time_allowed": 4500,
+            "scaled_passing_score": -0.34,
+            "time_limit_action": "exit,message"
+        }
+    }
+]}

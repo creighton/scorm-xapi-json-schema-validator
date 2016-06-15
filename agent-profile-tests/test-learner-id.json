@@ -1,0 +1,37 @@
+{"tests": [
+    {
+        "title": "test good learner_id",
+        "expect": true,
+        "test": {
+            "learner_id": "¯\\_(ツ)_/¯"
+        }
+    },
+    {
+        "title": "test bad boolean type for learner_id",
+        "expect": false,
+        "test": {
+            "learner_id": true
+        }
+    },
+    {
+        "title": "test bad number type for learner_id",
+        "expect": false,
+        "test": {
+            "learner_id": 42
+        }
+    },
+    {
+        "title": "test bad array type for learner_id",
+        "expect": false,
+        "test": {
+            "learner_id": []
+        }
+    },
+    {
+        "title": "test bad object type for learner_id",
+        "expect": false,
+        "test": {
+            "learner_id": {}
+        }
+    }
+]}

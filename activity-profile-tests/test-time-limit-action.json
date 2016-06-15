@@ -1,0 +1,65 @@
+{"tests": [
+    {
+        "title": "test good enum val time_limit_action",
+        "expect": true,
+        "test": {
+            "time_limit_action": "exit,message"
+        }
+    },
+    {
+        "title": "test good enum val time_limit_action",
+        "expect": true,
+        "test": {
+            "time_limit_action": "continue,message"
+        }
+    },
+    {
+        "title": "test good enum val time_limit_action",
+        "expect": true,
+        "test": {
+            "time_limit_action": "exit,no message"
+        }
+    },
+    {
+        "title": "test good enum val time_limit_action",
+        "expect": true,
+        "test": {
+            "time_limit_action": "continue,no message"
+        }
+    },
+    {
+        "title": "test bad enum time_limit_action",
+        "expect": false,
+        "test": {
+            "time_limit_action": "exit,mussege"
+        }
+    },
+    {
+        "title": "test bad int type time_limit_action",
+        "expect": false,
+        "test": {
+            "time_limit_action": 0
+        }
+    },
+    {
+        "title": "test bad boolean type time_limit_action",
+        "expect": false,
+        "test": {
+            "time_limit_action": true
+        }
+    },
+    {
+        "title": "test bad object type time_limit_action",
+        "expect": false,
+        "test": {
+            "time_limit_action": {}
+        }
+    },
+    {
+        "title": "test bad array type time_limit_action",
+        "expect": false,
+        "test": {
+            "time_limit_action": []
+        }
+    }
+]}

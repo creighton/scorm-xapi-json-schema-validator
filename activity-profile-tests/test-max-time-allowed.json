@@ -1,0 +1,51 @@
+{"tests": [
+    {
+        "title": "test good low end max_time_allowed",
+        "expect": true,
+        "test": {
+            "max_time_allowed": 0
+        }
+    },
+    {
+        "title": "test good high end max_time_allowed",
+        "expect": true,
+        "test": {
+            "max_time_allowed": 1000000
+        }
+    },
+    {
+        "title": "test below threshold max_time_allowed",
+        "expect": false,
+        "test": {
+            "max_time_allowed": -1
+        }
+    },
+    {
+        "title": "test bad string type max_time_allowed",
+        "expect": false,
+        "test": {
+            "max_time_allowed": "0"
+        }
+    },
+    {
+        "title": "test bad boolean type max_time_allowed",
+        "expect": false,
+        "test": {
+            "max_time_allowed": true
+        }
+    },
+    {
+        "title": "test bad object type max_time_allowed",
+        "expect": false,
+        "test": {
+            "max_time_allowed": {}
+        }
+    },
+    {
+        "title": "test bad array type max_time_allowed",
+        "expect": false,
+        "test": {
+            "max_time_allowed": []
+        }
+    }
+]}

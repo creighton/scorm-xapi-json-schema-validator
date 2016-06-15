@@ -1,0 +1,37 @@
+{"tests": [
+    {
+        "title": "test good launch_data",
+        "expect": true,
+        "test": {
+            "launch_data": "blah blah blah blah"
+        }
+    },
+    {
+        "title": "test bad boolean type launch_data",
+        "expect": false,
+        "test": {
+            "launch_data": false
+        }
+    },
+    {
+        "title": "test bad number type launch_data",
+        "expect": false,
+        "test": {
+            "launch_data": 10
+        }
+    },
+    {
+        "title": "test bad object type launch_data",
+        "expect": false,
+        "test": {
+            "launch_data": {}
+        }
+    },
+    {
+        "title": "test bad array typelaunch_data",
+        "expect": false,
+        "test": {
+            "launch_data": []
+        }
+    }
+]}

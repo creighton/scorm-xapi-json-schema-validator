@@ -1,0 +1,58 @@
+{"tests": [
+    {
+        "title": "test good low end scaled_passing_score",
+        "expect": true,
+        "test": {
+            "scaled_passing_score": -1
+        }
+    },
+    {
+        "title": "test good high end scaled_passing_score",
+        "expect": true,
+        "test": {
+            "scaled_passing_score": 1
+        }
+    },
+    {
+        "title": "test above threshold scaled_passing_score",
+        "expect": false,
+        "test": {
+            "scaled_passing_score": 1.0001
+        }
+    },
+    {
+        "title": "test below threshold scaled_passing_score",
+        "expect": false,
+        "test": {
+            "scaled_passing_score": -1.00001
+        }
+    },
+    {
+        "title": "test bad string type scaled_passing_score",
+        "expect": false,
+        "test": {
+            "scaled_passing_score": "0"
+        }
+    },
+    {
+        "title": "test bad boolean type scaled_passing_score",
+        "expect": false,
+        "test": {
+            "scaled_passing_score": true
+        }
+    },
+    {
+        "title": "test bad object type scaled_passing_score",
+        "expect": false,
+        "test": {
+            "scaled_passing_score": {}
+        }
+    },
+    {
+        "title": "test bad array type scaled_passing_score",
+        "expect": false,
+        "test": {
+            "scaled_passing_score": []
+        }
+    }
+]}

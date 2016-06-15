@@ -1,0 +1,7 @@
+{"tests": [
+    {
+        "title": "test an empty json object",
+        "expect": false,
+        "test": {}
+    }
+]}

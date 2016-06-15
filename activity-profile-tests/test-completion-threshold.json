@@ -1,0 +1,58 @@
+{"tests": [
+    {
+        "title": "test good low end completion_threshold",
+        "expect": true,
+        "test": {
+            "completion_threshold": 0
+        }
+    },
+    {
+        "title": "test good high end completion_threshold",
+        "expect": true,
+        "test": {
+            "completion_threshold": 1
+        }
+    },
+    {
+        "title": "test below threshold completion_threshold",
+        "expect": false,
+        "test": {
+            "completion_threshold": -1
+        }
+    },
+    {
+        "title": "test above threshold completion_threshold",
+        "expect": false,
+        "test": {
+            "completion_threshold": 1.0001
+        }
+    },
+    {
+        "title": "test bad string completion_threshold",
+        "expect": false,
+        "test": {
+            "completion_threshold": "0"
+        }
+    },
+    {
+        "title": "test bad boolean completion_threshold",
+        "expect": false,
+        "test": {
+            "completion_threshold": true
+        }
+    },
+    {
+        "title": "test bad object type completion_threshold",
+        "expect": false,
+        "test": {
+            "completion_threshold": {}
+        }
+    },
+    {
+        "title": "test bad array type completion_threshold",
+        "expect": false,
+        "test": {
+            "completion_threshold": []
+        }
+    }
+]}

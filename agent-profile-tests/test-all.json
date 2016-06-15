@@ -1,0 +1,16 @@
+{"tests": [
+    {
+        "title": "test a complete agent profile object",
+        "expect": true,
+        "test": {
+            "learner_id": "foo-bar-10000",
+            "learner_name": "Scrub Faloo",
+            "preferences": {
+                "audio_level": 50,
+                "language": "en",
+                "delivery_speed": 10,
+                "audio_captioning": -1
+            }
+        }
+    }
+]}

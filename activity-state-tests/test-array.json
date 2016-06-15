@@ -1,0 +1,23 @@
+{"tests": [
+    {
+        "title": "test array with valid uri",
+        "expect": true,
+        "test": {
+            "attempts" : ["http://should.be/uri"]
+        }
+    },
+    {
+        "title": "test array with str instead of uri",
+        "expect": false,
+        "test": {
+            "attempts" : ["this should be an iri"]
+        }
+    },
+    {
+        "title": "test empty array",
+        "expect": true,
+        "test": {
+            "attempts" : []
+        }
+    }
+]}
