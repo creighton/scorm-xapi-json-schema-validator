@@ -1,0 +1,51 @@
+{"tests": [
+    {
+        "title": "test good credit",
+        "expect": true,
+        "test": {
+            "credit": "credit"
+        }
+    },
+    {
+        "title": "test good no-credit",
+        "expect": true,
+        "test": {
+            "credit": "no-credit"
+        }
+    },
+    {
+        "title": "test bad val for credit",
+        "expect": false,
+        "test": {
+            "credit": "yepper"
+        }
+    },
+    {
+        "title": "test bad boolean type for credit",
+        "expect": false,
+        "test": {
+            "credit": false
+        }
+    },
+    {
+        "title": "test bad number type for credit",
+        "expect": false,
+        "test": {
+            "credit": 3
+        }
+    },
+    {
+        "title": "test bad array type for credit",
+        "expect": false,
+        "test": {
+            "credit": []
+        }
+    },
+    {
+        "title": "test bad object type for credit",
+        "expect": false,
+        "test": {
+            "credit": {}
+        }
+    }
+]}
