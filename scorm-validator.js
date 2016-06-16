@@ -1,24 +1,39 @@
-// https://github.com/mafintosh/is-my-json-valid/tree/master/test
+// use: node scorm-validator.js [-v] [path to schemas]
 var validator = require('is-my-json-valid/require');
 var fs = require('fs');
 var colors = require('colors');
+var cmdarg = require('command-line-args');
 
-var schemas = ['../scorm-json-schemas/scorm.profile.activity.profile.schema.json',
-               '../scorm-json-schemas/scorm.profile.activity.state.schema.json',
-               '../scorm-json-schemas/scorm.profile.agent.profile.schema.json',
-               '../scorm-json-schemas/scorm.profile.attempt.state.schema.json'];
+var args = cmdarg([
+    {name: 'verbose', alias: 'v', type: Boolean},
+    {name: 'path', alias: 'p', type: String}
+]);
+
+var SCHEMA_PATH = args.path || '../scorm-json-schemas/';
+if (! SCHEMA_PATH.endsWith('/')) SCHEMA_PATH = SCHEMA_PATH + '/';
+
+var schemas = ['scorm.profile.activity.profile.schema.json',
+               'scorm.profile.activity.state.schema.json',
+               'scorm.profile.agent.profile.schema.json',
+               'scorm.profile.attempt.state.schema.json'];
+
+
+
+
 var res_tracker = {"tests": {}, "starttime": +Date.now()};
-var verbose = process.argv[2] === "-v" || false;
+var verbose = args.verbose;
 
 
 console.log();
 console.log("+ + Starting tests + +".yellow.bold.underline);
+console.log("location:".white.bold, require('path').resolve(SCHEMA_PATH));
 console.log();
 
 
 schemas.forEach(function(cur, idx, arr) {
-    var validate = validator(cur);
-    runtestsSync(cur.split('.')[4] + '-' +  cur.split('.')[5] + '-' + 'tests/', validate);
+    var validate = validator(SCHEMA_PATH + cur);
+    var folder = cur.split('.')[2] + '-' +  cur.split('.')[3] + '-' + 'tests/';
+    runtestsSync(folder, validate);
 });
 printResults(+Date.now());
 
@@ -78,5 +93,5 @@ function printTestDetails(testfilearr) {
         }, 0);
         return prev;
     }, {"passed": 0, "failed": 0});
-    return "passed: " + res.passed + "  failed: " + res.failed;
+    return "passed: " + colors.green(res.passed) + "  failed: " + colors.red(res.failed);
 }
