@@ -1,0 +1,141 @@
+{"tests": [
+    {
+        "title": "test good all props for adl_data",
+        "expect": true,
+        "test": {
+            "adl_data": [
+                {
+                    "activityId": "http://test.iri.example.com",
+                    "agent": {"mbox": "mailto:tom@example.com"},
+                    "stateId": "test-one",
+                    "registration": "b4a57cf5-0d48-4439-a650-1753af8831a3"
+                }
+            ]
+        }
+    },
+    {
+        "title": "test good no reg for adl_data",
+        "expect": true,
+        "test": {
+            "adl_data": [
+                {
+                    "activityId": "http://test.iri.example.com/2",
+                    "agent": {"mbox": "mailto:tom@example.com"},
+                    "stateId": "test-two"
+                }
+            ]
+        }
+    },
+    {
+        "title": "test good [all props, no reg] for adl_data",
+        "expect": true,
+        "test": {
+            "adl_data": [
+                {
+                    "activityId": "http://test.iri.example.com",
+                    "agent": {"mbox": "mailto:tom@example.com"},
+                    "stateId": "test-one",
+                    "registration": "b4a57cf5-0d48-4439-a650-1753af8831a3"
+                },
+                {
+                    "activityId": "http://test.iri.example.com/2",
+                    "agent": {"mbox": "mailto:tom@example.com"},
+                    "stateId": "test-two"
+                }
+            ]
+        }
+    },
+    {
+        "title": "test bad no stateId for adl_data",
+        "expect": false,
+        "test": {
+            "adl_data": [
+                {
+                    "activityId": "http://test.iri.example.com/2",
+                    "agent": {"mbox": "mailto:tom@example.com"}
+                }
+            ]
+        }
+    },
+    {
+        "title": "test bad no agent for adl_data",
+        "expect": false,
+        "test": {
+            "adl_data": [
+                {
+                    "activityId": "http://test.iri.example.com/2",
+                    "stateId": "test-two"
+                }
+            ]
+        }
+    },
+    {
+        "title": "test bad no activityId for adl_data",
+        "expect": false,
+        "test": {
+            "adl_data": [
+                {
+                    "agent": {"mbox": "mailto:tom@example.com"},
+                    "stateId": "test-one",
+                    "registration": "b4a57cf5-0d48-4439-a650-1753af8831a3"
+                }
+            ]
+        }
+    },
+    {
+        "title": "test bad activityId type for adl_data",
+        "expect": false,
+        "test": {
+            "adl_data": [
+                {
+                    "activityId": "not uri",
+                    "agent": {"mbox": "mailto:tom@example.com"},
+                    "stateId": "test-one",
+                    "registration": "b4a57cf5-0d48-4439-a650-1753af8831a3"
+                }
+            ]
+        }
+    },
+    {
+        "title": "test bad agent type for adl_data",
+        "expect": false,
+        "test": {
+            "adl_data": [
+                {
+                    "activityId": "http://example.com",
+                    "agent": "bob newhart",
+                    "stateId": "test-one",
+                    "registration": "b4a57cf5-0d48-4439-a650-1753af8831a3"
+                }
+            ]
+        }
+    },
+    {
+        "title": "test bad stateId type for adl_data",
+        "expect": false,
+        "test": {
+            "adl_data": [
+                {
+                    "activityId": "http://example.com",
+                    "agent": {"mbox": "mailto:tom@example.com"},
+                    "stateId": true,
+                    "registration": "b4a57cf5-0d48-4439-a650-1753af8831a3"
+                }
+            ]
+        }
+    },
+    {
+        "title": "test bad registration type for adl_data",
+        "expect": false,
+        "test": {
+            "adl_data": [
+                {
+                    "activityId": "http://example.com",
+                    "agent": {"mbox": "mailto:tom@example.com"},
+                    "stateId": "test-one",
+                    "registration": "4a57cf5-noo-1753af8831a"
+                }
+            ]
+        }
+    }
+]}
