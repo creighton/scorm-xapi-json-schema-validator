@@ -1,0 +1,58 @@
+{"tests": [
+    {
+        "title": "test good mode",
+        "expect": true,
+        "test": {
+            "mode": "browse"
+        }
+    },
+    {
+        "title": "test good mode",
+        "expect": true,
+        "test": {
+            "mode": "normal"
+        }
+    },
+    {
+        "title": "test good mode",
+        "expect": true,
+        "test": {
+            "mode": "review"
+        }
+    },
+    {
+        "title": "test bad enum mode",
+        "expect": false,
+        "test": {
+            "mode": "doit"
+        }
+    },
+    {
+        "title": "test bad number type for mode",
+        "expect": false,
+        "test": {
+            "mode": 2
+        }
+    },
+    {
+        "title": "test bad boolean type for mode",
+        "expect": false,
+        "test": {
+            "mode": false
+        }
+    },
+    {
+        "title": "test bad array type for mode",
+        "expect": false,
+        "test": {
+            "mode": []
+        }
+    },
+    {
+        "title": "test bad object type for mode",
+        "expect": false,
+        "test": {
+            "mode": {}
+        }
+    }
+]}
