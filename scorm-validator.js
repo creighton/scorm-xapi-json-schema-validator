@@ -3,10 +3,10 @@ var validator = require('is-my-json-valid/require');
 var fs = require('fs');
 var colors = require('colors');
 
-var schemas = ['../scorm.profile.activity.profile.schema.json',
-               '../scorm.profile.activity.state.schema.json',
-               '../scorm.profile.agent.profile.schema.json',
-               '../scorm.profile.attempt.state.schema.json'];
+var schemas = ['../scorm-json-schemas/scorm.profile.activity.profile.schema.json',
+               '../scorm-json-schemas/scorm.profile.activity.state.schema.json',
+               '../scorm-json-schemas/scorm.profile.agent.profile.schema.json',
+               '../scorm-json-schemas/scorm.profile.attempt.state.schema.json'];
 var res_tracker = {"tests": {}, "starttime": +Date.now()};
 var verbose = process.argv[2] === "-v" || false;
 

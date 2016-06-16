@@ -1,0 +1,44 @@
+{"tests": [
+    {
+        "title": "test good val for location",
+        "expect": true,
+        "test": {
+            "location": "here is where we are"
+        }
+    },
+    {
+        "title": "test empty str for locaton",
+        "expect": true,
+        "test": {
+            "location": ""
+        }
+    },
+    {
+        "title": "test bad number type for location",
+        "expect": false,
+        "test": {
+            "location": 5
+        }
+    },
+    {
+        "title": "test bad boolean type for location",
+        "expect": false,
+        "test": {
+            "location": true
+        }
+    },
+    {
+        "title": "test bad array type for location",
+        "expect": false,
+        "test": {
+            "location": []
+        }
+    },
+    {
+        "title": "test bad object type for location",
+        "expect": false,
+        "test": {
+            "location": {}
+        }
+    }
+]}
