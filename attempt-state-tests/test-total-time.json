@@ -1,0 +1,44 @@
+{"tests": [
+    {
+        "title": "test good value for total_time",
+        "expect": true,
+        "test": {
+            "total_time": "P1Y2M15DT6H4M22.05S"
+        }
+    },
+    {
+        "title": "test bad str value for total_time",
+        "expect": false,
+        "test": {
+            "total_time": "4H"
+        }
+    },
+    {
+        "title": "test bad number type for total_time",
+        "expect": false,
+        "test": {
+            "total_time": 0
+        }
+    },
+    {
+        "title": "test bad boolean type for total_time",
+        "expect": false,
+        "test": {
+            "total_time": true
+        }
+    },
+    {
+        "title": "test bad array type for total_time",
+        "expect": false,
+        "test": {
+            "total_time": []
+        }
+    },
+    {
+        "title": "test bad object type for total_time",
+        "expect": false,
+        "test": {
+            "total_time": {}
+        }
+    }
+]}
